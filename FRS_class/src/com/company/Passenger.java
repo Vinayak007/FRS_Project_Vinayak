@@ -1,15 +1,81 @@
 package com.company;
 
 public class Passenger {
-   Address address;
-   Contact contact;
 
-   //Contructor
-   public Passenger(Address address, Contact contact) {
-      this.address = address;
-      this.contact = contact;
+
+   //  for Composition Relationship Nesting Class Contact & Class Address
+   private Address address;
+   private Contact contact;
+
+
+
+
+  //********************************** nested class CONTACT
+   private static class Contact {
+       String name;
+       int phoneNumber;
+       String emailID;
+
+       //contructor
+       public Contact(String name, int phoneNumber, String emailID) {
+         this.name = name;
+         this.phoneNumber = phoneNumber;
+         this.emailID = emailID;
+      }
+
+   }
+   //********************************************** nested class ADDRESS
+   private static class Address {
+       String street;
+       String city;
+       String state;
+
+       //contructor
+       public Address(String Street, String City, String State) {
+         this.street = Street;
+         this.city = City;
+         this.state = State;
+      }
+
    }
 
-   void getContactdetails(){}
-   void getAddressdetails(){}
+
+
+
+
+   //static memeber & initialising using static block
+   private static int idCounter;
+   private int id;
+   static {
+      idCounter = 0;
+   }
+
+
+   //********************************** Passenger Construtor
+   public  Passenger(String name,int phoneNumber,String emailID,String street,String city,String state){
+
+      this.contact = new Contact(name, phoneNumber, emailID);
+      this.address = new Address(street, city, state);
+      this.id =++idCounter;                   // id incrementing
+
+   }
+
+
+   //************************************ Passenger functions
+
+   public int getPassengerCount(){      //return id
+      return this.id;
+   }
+
+   public String getName() {           //return Passenger name for Ticket
+       return contact.name;
+    }
+
+
+   public String getContactDetails() {   // display contact detail
+      return contact.name + ", " + contact.phoneNumber + ", " + contact.emailID;
+   }
+   public String getAddressDetails() {   //display address detail
+      return address.street + ", " + address.city + ", " + address.state;
+   }
 }
