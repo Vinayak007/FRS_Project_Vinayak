@@ -18,6 +18,21 @@ public abstract class Ticket {
     private int flightDuration;
 
 
+    //************************************** Ticket Constructor
+  /*  public Ticket(Ticket ticket){
+        this.flight = new Flight[2];
+        this.passenger = new Passenger[3];
+
+        this.pnrNumber=pnrNumber;
+        this.departureLocation=departureLocation;
+        this.destinationLocation=getDestinationLocation();
+        this.seatNumber=seatNumber;
+        this.ticketPrice=ticketPrice;
+        this.cancelTicket=cancelTicket;
+        this.flightDuration=flightDuration;
+    }
+*/
+
 
     // *************************************** Ticket Constructor
     public Ticket(int pnrNumber,String departureLocation,String destinationLocation,int seatNumber,int ticketPrice,boolean cancelTicket,int flightDuration){
@@ -36,12 +51,10 @@ public abstract class Ticket {
 
     }
 
-
-
-
     //****************************************************** Function which is common
-    void isCancelTicket(){}
-    void letsCancelTicket(){}
+    void CancelTicket(){
+        System.out.println("Ticket Cancellation ->"  + getCancelTicket());
+    }
 
 
     //********************************************************** getter  &  setter
@@ -129,4 +142,8 @@ public abstract class Ticket {
         }
         return null;
     }
+
+
+    //***************************************************************** using Polymorphism
+    public  abstract void  printTicketDetails(Ticket ticket);
 }

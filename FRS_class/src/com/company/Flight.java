@@ -11,11 +11,10 @@ public class Flight {
 
     //********************************************* Constructor
 
-    Flight(int flightNumber,String airlinenName,int flightCapacity,int bookedSeatStatus,boolean flightAvailable){
+    Flight(int flightNumber,String airlinenName,int flightCapacity,boolean flightAvailable){
         this.flightNumber=flightNumber;
         this.airlineName=airlinenName;
         this.flightCapacity=flightCapacity;
-        this.bookedSeatStatus=bookedSeatStatus;
         this.flightAvailable=flightAvailable;
     }
 

@@ -72,10 +72,5 @@ public class Passenger {
     }
 
 
-   public String getContactDetails() {   // display contact detail
-      return contact.name + ", " + contact.phoneNumber + ", " + contact.emailID;
-   }
-   public String getAddressDetails() {   //display address detail
-      return address.street + ", " + address.city + ", " + address.state;
-   }
+   public String PassengerDetails() { return "Passenger Detail"+" -> "+ "Name:"+ contact.name+"  ph:" +contact.phoneNumber +" email:"+contact.emailID+" street:"+address.street+" city:"+address.city+" state:"+address.state;}
 }

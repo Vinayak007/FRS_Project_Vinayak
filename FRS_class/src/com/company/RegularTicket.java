@@ -1,5 +1,7 @@
 package com.company;
 
+import java.sql.SQLOutput;
+
 public class RegularTicket extends Ticket {
 
     //****************************************************** attributes
@@ -23,8 +25,12 @@ public class RegularTicket extends Ticket {
 
 
     //************************************************************* Function
-    void checkSpecialService(){}
-    void updateSpecialService(){}
+    void checkSpecialService(){
+        System.out.println("Special Services Avaialed  Are ->: ");
+        System.out.println("Food-> "+isFood());
+        System.out.println("Water-> " +isWater());
+        System.out.println("Snack-> " +isSnack());
+    }
 
 
 
@@ -54,4 +60,15 @@ public class RegularTicket extends Ticket {
     public void setSnack(boolean snack) {
         this.snack = snack;
     }
+
+
+
+
+
+    //*******************************************************************  applying Polymorphism
+    public   void  printTicketDetails(Ticket ticket){
+        System.out.println("PNR number for Regular Ticket "+ticket.getPnrNumber());
+    }
+
+
 }

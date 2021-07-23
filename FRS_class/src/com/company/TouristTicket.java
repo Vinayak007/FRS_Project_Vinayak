@@ -5,7 +5,6 @@ public class TouristTicket extends Ticket {
     //***************************************************************  attributes
     private String hotelAddress;
     private int numberLocation;
-    private String[] visitTheseLocation = new String[5];
 
 
 
@@ -22,12 +21,10 @@ public class TouristTicket extends Ticket {
 
 
 
-    //***************************************************************** Tourist Function
-    void editLocation(){}
-
 
 
     //****************************************************************** getter & setter
+
     public String getHotelAddress() {
         return hotelAddress;
     }
@@ -44,13 +41,12 @@ public class TouristTicket extends Ticket {
         this.numberLocation = numberLocation;
     }
 
-    public String[] getVisitTheseLocation() {
-        return visitTheseLocation;
+
+
+
+
+    //*********************************************************************** apply ploymorphism
+    public   void  printTicketDetails(Ticket ticket){
+        System.out.println("PNR number for Regular Ticket "+ticket.getPnrNumber());
     }
-
-    public void setVisitTheseLocation(String[] visitTheseLocation) {
-        this.visitTheseLocation = visitTheseLocation;
-    }
-
-
 }
