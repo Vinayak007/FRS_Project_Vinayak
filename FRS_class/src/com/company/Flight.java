@@ -7,14 +7,10 @@ public class Flight {
    private int bookedSeatStatus;
    private boolean flightAvailable;
 
+
+
     //********************************************* Constructor
-    Flight(){
-        flightNumber=0;
-        airlineName="####";
-        flightCapacity=0;
-        bookedSeatStatus=0;
-        flightAvailable=false;
-    }
+
     Flight(int flightNumber,String airlinenName,int flightCapacity,int bookedSeatStatus,boolean flightAvailable){
         this.flightNumber=flightNumber;
         this.airlineName=airlinenName;
@@ -22,6 +18,10 @@ public class Flight {
         this.bookedSeatStatus=bookedSeatStatus;
         this.flightAvailable=flightAvailable;
     }
+
+
+
+
 
     //*************************************** getter&setter
     public int getFlightNumber() {

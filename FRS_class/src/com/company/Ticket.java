@@ -1,9 +1,6 @@
 package com.company;
 
-public class Ticket {
-
-
-
+public abstract class Ticket {
 
     // Aggregation of Class Flight & Class Passenger
     private Flight[] flight;
@@ -11,15 +8,99 @@ public class Ticket {
 
 
 
+    //************************************************** Attributes which is common
+    private int pnrNumber;
+    private String departureLocation;
+    private String destinationLocation;
+    private int seatNumber;
+    private int ticketPrice;
+    private Boolean cancelTicket;
+    private int flightDuration;
 
 
 
     // *************************************** Ticket Constructor
-    public Ticket(){
+    public Ticket(int pnrNumber,String departureLocation,String destinationLocation,int seatNumber,int ticketPrice,boolean cancelTicket,int flightDuration){
+
         this.flight = new Flight[2];
         this.passenger = new Passenger[3];
 
+        this.pnrNumber=pnrNumber;
+        this.departureLocation=departureLocation;
+        this.destinationLocation=getDestinationLocation();
+        this.seatNumber=seatNumber;
+        this.ticketPrice=ticketPrice;
+        this.cancelTicket=cancelTicket;
+        this.flightDuration=flightDuration;
+
+
     }
+
+
+
+
+    //****************************************************** Function which is common
+    void isCancelTicket(){}
+    void letsCancelTicket(){}
+
+
+    //********************************************************** getter  &  setter
+    public int getPnrNumber() {
+        return pnrNumber;
+    }
+
+    public void setPnrNumber(int pnrNumber) {
+        this.pnrNumber = pnrNumber;
+    }
+
+    public String getDepartureLocation() {
+        return departureLocation;
+    }
+
+    public void setDepartureLocation(String departureLocation) {
+        this.departureLocation = departureLocation;
+    }
+
+    public String getDestinationLocation() {
+        return destinationLocation;
+    }
+
+    public void setDestinationLocation(String destinationLocation) {
+        this.destinationLocation = destinationLocation;
+    }
+
+    public int getSeatNumber() {
+        return seatNumber;
+    }
+
+    public void setSeatNumber(int seatNumber) {
+        this.seatNumber = seatNumber;
+    }
+
+    public int getTicketPrice() {
+        return ticketPrice;
+    }
+
+    public void setTicketPrice(int ticketPrice) {
+        this.ticketPrice = ticketPrice;
+    }
+
+    public Boolean getCancelTicket() {
+        return cancelTicket;
+    }
+
+    public void setCancelTicket(Boolean cancelTicket) {
+        this.cancelTicket = cancelTicket;
+    }
+
+    public int getFlightDuration() {
+        return flightDuration;
+    }
+
+    public void setFlightDuration(int flightDuration) {
+        this.flightDuration = flightDuration;
+    }
+
 
 
 
