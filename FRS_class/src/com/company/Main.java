@@ -11,9 +11,8 @@ public class Main {
        printTicketDetails(rt);
        printTicketDetails(tt);
 
-//       Passenger p = new Passenger("Koya",45666,"gmail@no","Border road","Pathankot","Punjab");
-
-//       Flight f = new Flight(2233,"Indigo",6,true);
+    Passenger p = new Passenger("Koya",45666,"gmail@no","Border road","Pathankot","Punjab");
+    Flight f = new Flight(2233,"Indigo",6,true);
 
 
     }
