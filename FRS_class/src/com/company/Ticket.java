@@ -145,5 +145,5 @@ public abstract class Ticket {
 
 
     //***************************************************************** using Polymorphism
-    public  abstract void  printTicketDetails(Ticket ticket);
+    public  abstract void  ticketDetails();
 }

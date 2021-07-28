@@ -11,9 +11,9 @@ public class Main {
        printTicketDetails(rt);
        printTicketDetails(tt);
 
-       Passenger p = new Passenger("Koya",45666,"gmail@no","Border road","Pathankot","Punjab");
+//       Passenger p = new Passenger("Koya",45666,"gmail@no","Border road","Pathankot","Punjab");
 
-       Flight f = new Flight(2233,"Indigo",6,true);
+//       Flight f = new Flight(2233,"Indigo",6,true);
 
 
     }
@@ -21,7 +21,7 @@ public class Main {
     //*************************************************** polymorphism
 
     public static void  printTicketDetails(Ticket ticket){
-        System.out.println(ticket.getPnrNumber());
+        ticket.ticketDetails();
     }
 
 }

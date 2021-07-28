@@ -46,7 +46,7 @@ public class TouristTicket extends Ticket {
 
 
     //*********************************************************************** apply ploymorphism
-    public   void  printTicketDetails(Ticket ticket){
-        System.out.println("PNR number for Regular Ticket "+ticket.getPnrNumber());
+    public   void  ticketDetails(){
+        System.out.println("PNR number of Tourist Ticket "+ getPnrNumber());
     }
 }

@@ -66,8 +66,8 @@ public class RegularTicket extends Ticket {
 
 
     //*******************************************************************  applying Polymorphism
-    public   void  printTicketDetails(Ticket ticket){
-        System.out.println("PNR number for Regular Ticket "+ticket.getPnrNumber());
+    public   void  ticketDetails(){
+        System.out.println("PNR number of Regular Ticket "+getPnrNumber());
     }
 
 
